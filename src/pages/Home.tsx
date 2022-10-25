@@ -25,6 +25,8 @@ export const Home: React.FC<Props> = ({}) => {
             {globalSiteData.fullName}
           </Typography>
         </Box>
+
+        <img style={{ width: '100%' }} src={'img/mainPuxTiny.jpg'}></img>
         <Box>
           <Stack justifyContent="center" alignItems="center" spacing={2}>
             <Typography sx={descSX}>{globalSiteData.description['main']}</Typography>
