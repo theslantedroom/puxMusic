@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // @mui material components
-import { useMediaQuery, Stack, Box, Typography, useTheme, Divider } from '@mui/material';
+import { useMediaQuery, Stack, Box, Typography, useTheme, Divider, Button } from '@mui/material';
 
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from 'react-image-gallery';
@@ -26,13 +26,23 @@ export const Home: React.FC<Props> = ({}) => {
           </Typography>
         </Box>
         <Box>
-          <Stack direction="column" justifyContent="flex-start" alignItems="stretch" spacing={2}>
+          <Stack justifyContent="center" alignItems="center" spacing={2}>
             <Typography sx={descSX}>{globalSiteData.description['main']}</Typography>
             <Typography sx={descSX}>{globalSiteData.description['fact']}</Typography>
             <Typography sx={descSX}>{globalSiteData.description['style']}</Typography>
           </Stack>
         </Box>
       </Box>
+
+      <Stack direction="column" justifyContent="flex-start" alignItems="stretch" sx={{ mt: 2 }}>
+        <Button
+          variant="contained"
+          href="https://www.youtube.com/channel/UCL56S5Lxy0iysHngLWSFA6g"
+          target={'blank'}
+        >
+          Phil Puxley Music - YouTube Channel
+        </Button>
+      </Stack>
 
       <Divider sx={{ my: 4 }} />
       <ImageGallery items={globalSiteData.images} />
