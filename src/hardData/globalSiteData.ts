@@ -1,7 +1,7 @@
 export const globalSiteData = {
   fullName: 'Philip Puxley',
   slogan: '',
-  mainImg: '/img/cover.jpg',
+  mainImg: 'img/cover.jpg',
   description: {
     main: 'Philip Puxley is a singer, songwriter and multi-instrumentalist experimenting in a broad range of music throughout his life. Philip’s music career was kicked up a notch after winning 2x battles of the bands in Vancouver in 2013 playing with long time friends after returning from a two year journey. He has gone on to establish himself in the Canadian Country music world co-writing and recording on 4x Canadian Country Radio Top 40 singles and winning numerous awards including four time banjo player of the year award in BC.',
 
