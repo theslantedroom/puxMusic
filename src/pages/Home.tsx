@@ -20,13 +20,16 @@ export const Home: React.FC<Props> = ({}) => {
   return (
     <HomeLayout illustration={globalSiteData.mainImg}>
       <Box>
-        <Box mb={4} textAlign="center">
+        <Box mb={1} textAlign="center">
           <Typography variant="h4" fontWeight="bold">
             {globalSiteData.fullName}
           </Typography>
         </Box>
+        <Stack direction="column" justifyContent="center" alignItems="center">
+          <Typography variant="h6">{'Debut Release'}</Typography>
+          <img style={{ width: '100%' }} src={'img/mainPuxTiny.jpg'}></img>
+        </Stack>
 
-        <img style={{ width: '100%' }} src={'img/mainPuxTiny.jpg'}></img>
         <Box>
           <Stack justifyContent="center" alignItems="center" spacing={2}>
             <Typography sx={descSX}>{globalSiteData.description['main']}</Typography>
