@@ -34,7 +34,7 @@ export const typography: TypographyOptions = {
     fontSize: 24,
   },
   h6: {
-    fontFamily,
+    fontFamily: fontFamilyHead,
     fontWeight: fontWeight400,
     fontSize: 20,
   },
@@ -65,8 +65,8 @@ export const typography: TypographyOptions = {
     textTransform: 'uppercase',
   },
   caption: {
-    fontFamily,
-    fontSize: 12,
+    fontFamily: fontFamilyHead,
+    fontSize: 14,
     fontWeight: fontWeight400,
   },
   overline: {

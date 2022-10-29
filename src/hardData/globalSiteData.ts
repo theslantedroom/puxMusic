@@ -31,7 +31,8 @@ export const globalSiteData = {
     ],
   },
   sectionA: {
-    title: 'Chris Buck Band (Country Pop band)',
+    title: 'Chris Buck Band',
+    genre: 'Country Pop',
     items: [
       { name: '2017 BCCMA Album/EP of the Year Award', url: '' },
       {
@@ -45,7 +46,8 @@ export const globalSiteData = {
     ],
   },
   sectionB: {
-    title: 'Rollin’ Trainwreck (Country/Bluegrass/Rock band)',
+    title: 'Rollin’ Trainwreck',
+    genre: 'Country/Bluegrass/Rock',
     items: [
       { name: '2017 BCCMA Album/EP of the Year Award', url: '' },
       {

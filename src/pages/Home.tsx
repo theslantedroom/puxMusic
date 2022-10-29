@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 // @mui material components
-import { Stack, Box, Typography, useTheme, Divider, Button } from '@mui/material';
+import { Stack, Box, Typography, IconButton, Divider, Button } from '@mui/material';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from 'react-image-gallery';
 
@@ -11,6 +14,7 @@ import { usePaletteModeContext } from '../theme/MuiThemeProvider';
 // data
 import { globalSiteData } from '../hardData/globalSiteData';
 import { HomeLayout } from './HomeLayout';
+import { colors } from '../theme/palettes/colors';
 export interface Props {}
 export const Home: React.FC<Props> = ({}) => {
   const { togglePaletteMode } = usePaletteModeContext();
@@ -86,6 +90,8 @@ export const Home: React.FC<Props> = ({}) => {
           <Typography variant="h5" fontWeight="bold">
             {globalSiteData.sectionA.title}
           </Typography>
+
+          <Typography variant="caption">{globalSiteData.sectionA.genre}</Typography>
         </Box>
         <Box>
           <Stack direction="column" justifyContent="flex-start" alignItems="stretch" spacing={2}>
@@ -105,6 +111,7 @@ export const Home: React.FC<Props> = ({}) => {
           <Typography variant="h5" fontWeight="bold">
             {globalSiteData.sectionB.title}
           </Typography>
+          <Typography variant="caption">{globalSiteData.sectionB.genre}</Typography>
         </Box>
         <Box>
           <Stack direction="column" justifyContent="flex-start" alignItems="stretch" spacing={2}>
@@ -121,12 +128,22 @@ export const Home: React.FC<Props> = ({}) => {
       <Divider sx={{ my: 4 }} />
       <Box>
         <Box mb={1} textAlign="center">
-          <Typography variant="h5">{globalSiteData.contact.title}</Typography>
+          <Typography variant="h5" fontWeight="bold">
+            {globalSiteData.contact.title}
+          </Typography>
         </Box>
         <Stack direction="column" justifyContent="flex-start" alignItems="stretch">
-          <Typography variant="caption" sx={descSX}>
+          <Typography variant="body2" sx={descSX}>
             {globalSiteData.contact.mail}
           </Typography>
+          <Stack direction="row" justifyContent="center" alignItems="stretch">
+            <IconButton>
+              <FacebookIcon sx={{ fill: colors.facebook }} />
+            </IconButton>
+            <IconButton>
+              <InstagramIcon sx={{ fill: colors.facebook }} />
+            </IconButton>
+          </Stack>
           <Typography variant="caption" sx={{ ...descSX, paddingBottom: 5 }}>
             {globalSiteData.contact.copyright + new Date().getFullYear()}
           </Typography>
