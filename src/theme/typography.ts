@@ -1,34 +1,35 @@
 import type { TypographyOptions } from '@mui/material/styles/createTypography';
-
 const fontWeight300 = 300;
 const fontWeight400 = 400;
 
 const fontFamily = ['Open Sans', 'sans-serif', 'Times New Roman'].join(',');
 
+const fontFamilyHead = ['Cinzel', 'Open Sans', 'sans-serif', 'Times New Roman'].join(',');
+
 export const typography: TypographyOptions = {
   fontFamily,
   h1: {
-    fontFamily,
+    fontFamily: fontFamilyHead,
     fontWeight: fontWeight300,
     fontSize: 82,
   },
   h2: {
-    fontFamily,
+    fontFamily: fontFamilyHead,
     fontWeight: fontWeight300,
     fontSize: 59,
   },
   h3: {
-    fontFamily,
+    fontFamily: fontFamilyHead,
     fontWeight: fontWeight300,
     fontSize: 47,
   },
   h4: {
-    fontFamily,
+    fontFamily: fontFamilyHead,
     fontWeight: fontWeight300,
     fontSize: 33,
   },
   h5: {
-    fontFamily,
+    fontFamily: fontFamilyHead,
     fontWeight: fontWeight300,
     fontSize: 24,
   },

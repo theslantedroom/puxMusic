@@ -42,7 +42,7 @@ export const HomeLayout: React.FC<Props> = ({ illustration, children }) => {
         overflow: 'hidden',
       }}
     >
-      <Box
+      {/* <Box
         sx={{
           m: 1,
           position: 'absolute',
@@ -50,7 +50,7 @@ export const HomeLayout: React.FC<Props> = ({ illustration, children }) => {
         }}
       >
         {DarkModeBtn}
-      </Box>
+      </Box> */}
       <Box id="1" width="100%" height="100%">
         <Grid container sx={{ overflow: 'auto' }}>
           <Grid
