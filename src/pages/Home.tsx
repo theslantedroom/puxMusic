@@ -1,7 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
 // @mui material components
-import { Stack, Box, Typography, IconButton, Divider, Button } from '@mui/material';
+import {
+  Stack,
+  Box,
+  Typography,
+  IconButton,
+  Divider,
+  Button,
+  useTheme,
+  useMediaQuery,
+} from '@mui/material';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -18,6 +28,8 @@ import { colors } from '../theme/palettes/colors';
 export interface Props {}
 export const Home: React.FC<Props> = ({}) => {
   const { togglePaletteMode } = usePaletteModeContext();
+  const theme = useTheme();
+  const isLg = useMediaQuery(theme.breakpoints.up('lg'));
 
   const descSX = {
     textAlign: 'center',
@@ -51,7 +63,11 @@ export const Home: React.FC<Props> = ({}) => {
           </Stack>
         </Box>
       </Box>
-
+      {isLg ? null : (
+        <Box sx={{ width: '100%', pt: 2 }}>
+          <LiteYouTubeEmbed id="56feCXQrFYA" title="Pux" />
+        </Box>
+      )}
       <Button
         fullWidth
         variant="contained"
@@ -62,10 +78,9 @@ export const Home: React.FC<Props> = ({}) => {
       >
         Phil Puxley Music
       </Button>
+
       <ImageGallery items={globalSiteData.images} />
-
       <Divider sx={{ my: 4 }} />
-
       <Box>
         <Box mb={4} textAlign="center">
           <Typography variant="h4" fontWeight="bold">
@@ -85,6 +100,7 @@ export const Home: React.FC<Props> = ({}) => {
         </Box>
       </Box>
       <Divider sx={{ my: 4 }} />
+      {/* Section A */}
       <Box>
         <Box mb={4} textAlign="center">
           <Typography variant="h5" fontWeight="bold">
@@ -106,7 +122,8 @@ export const Home: React.FC<Props> = ({}) => {
         </Box>
       </Box>
       <Divider sx={{ my: 4 }} />
-      <Box>
+      {/* Section B */}
+      {/* <Box>
         <Box mb={4} textAlign="center">
           <Typography variant="h5" fontWeight="bold">
             {globalSiteData.sectionB.title}
@@ -124,8 +141,8 @@ export const Home: React.FC<Props> = ({}) => {
             })}
           </Stack>
         </Box>
-      </Box>
-      <Divider sx={{ my: 4 }} />
+      </Box> */}
+      {/* <Divider sx={{ my: 4 }} /> */}
       <Box>
         <Box mb={1} textAlign="center">
           <Typography variant="h5" fontWeight="bold">

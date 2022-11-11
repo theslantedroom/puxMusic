@@ -9,6 +9,6 @@ $ git push -u origin main
 
 git remote add origin git@github.com:theslantedroom/repo-name.git
 
-Must add 'www.philpuxleymusic.com' to custom domain in Github > settings pages > custom domains
+Must add 'www.philpuxleymusic.com' to custom domain in Github > settings pages > custom domains after every deploy
 
 www.philpuxleymusic.com
